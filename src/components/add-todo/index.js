@@ -25,11 +25,13 @@ function collectInput(event) {
 
 function saveTodo(){
     setTodos([...todos,todo]);
+    setTodo("");
 }
 
     return (
         <section className={styles.addTodo}>
             <input 
+            value={todo}
             onChange={collectInput}
             className={styles.AddTodoInput}
             placeholder='start typing...'/>
